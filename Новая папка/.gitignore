@@ -1,0 +1,11 @@
+*.exe 
+*.o 
+*.obj 
+*.out 
+cmake-build-\*
+CMakeFiles/ 
+.vscode/ipch/ 
+*.txt 
+*.zip 
+*.pdf 
+*.pptx
