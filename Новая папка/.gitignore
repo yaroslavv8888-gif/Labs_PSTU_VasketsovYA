@@ -4,8 +4,7 @@
 *.out 
 cmake-build-\*
 CMakeFiles/ 
-.vscode/ipch/ 
-*.txt 
+.vscode/ipch/  
 *.zip 
 *.pdf 
 *.pptx
