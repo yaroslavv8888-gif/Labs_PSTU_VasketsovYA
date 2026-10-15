@@ -17,7 +17,7 @@ int main(){
     float b2;
     double res11, res13, res1d, res2d; 
     float res12, res1f, res2f;
-
+    // установка точности вывода чисел с плавающей точкой
     cout << setprecision(15);
     // ввод и вывод в консоль данных с помощью cin и cout
     cout << "Введите целое число a: " << "\n";
