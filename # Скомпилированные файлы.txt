@@ -1,0 +1,30 @@
+# Скомпилированные файлы
+*.exe
+*.o
+*.obj
+*.out
+*.pdb
+*.ilk
+*.exp
+*.lib
+
+# Папки сборки
+build/
+bin/
+Debug/
+Release/
+x64/
+
+# Настройки IDE
+.vs/
+.vscode/
+*.user
+*.suo
+*.sln.docstates
+.idea/
+*.cbp
+*.layout
+
+# Временные файлы Word
+~$*.docx
+~$*.doc
