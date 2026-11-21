@@ -1,5 +1,4 @@
-#include<iostream>
-#include<clocale>
+#include <iostream>
 using namespace std;
 
 const int N = 5;
@@ -28,32 +27,32 @@ void ris()
     cout << "   1      2      3" << endl << endl;
 }
 
-void per(int a, int b)
+void per(int otkuda, int kuda)
 {
-    --kol[a - 1];
-    int d = A[a - 1][kol[a - 1]];
-    A[b - 1][kol[b - 1]] = d;
-    ++kol[b - 1];
+    int a = otkuda - 1;
+    int b = kuda - 1;
+    --kol[a];
+    int d = A[a][kol[a]];
+    A[b][kol[b]] = d;
+    ++kol[b];
     ris();
 }
 
-void hanoi(int n, int a, int b, int c)
+void han(int size, int otkuda, int kuda)
 {
-    if(n == 1)
-    {
-        per(a, b);
-    }
+    if (size == 1)
+        per(otkuda, kuda);
     else
     {
-        hanoi(n - 1, a, c, b);
-        per(a, b);
-        hanoi(n - 1, c, b, a);
+        int buferr = 6 - otkuda - kuda;
+        han(size - 1, otkuda, buferr);
+        per(otkuda, kuda);
+        han(size - 1, buferr, kuda);
     }
 }
 
 int main()
 {
-    setlocale(LC_ALL, ".UTF8");
     for(int i = 0; i < N; ++i)
     {
         A[0][i] = N - i;
@@ -61,7 +60,7 @@ int main()
     kol[0] = N;
 
     ris();
-    hanoi(N, 1, 3, 2);
+    han(N, 1, 3);
     return 0;
 }
 
