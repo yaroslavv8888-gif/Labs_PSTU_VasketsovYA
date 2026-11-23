@@ -32,13 +32,9 @@ int main()
             }
             cout << endl;
         }
+        for (int i = 0; i < rad; ++i)
+        delete[] M[i];
+
     delete[] M;
-    for(int i = 1; i < rad; ++i)
-        {
-            delete[] M[i];
-            M[i] = nullptr;
-        }
-    delete[] M;
-    M = nullptr;
     return 0;
 }
